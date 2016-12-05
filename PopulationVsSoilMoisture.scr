@@ -1,0 +1,29 @@
+#!/bin/sh
+
+
+echo 'extrcting data for soil moisture from VIC model simulation.....'
+python /vic_calc_mnth_mc.py
+
+
+echo 'extrcting duration for the deep soil moistures.....'
+python /LeastSoilMoistureduration.py
+python /MaxSoilMoistureduration.py
+
+
+echo 'Matching the the TerraPop Output with the VIC Model output .....'
+python /TerraPopCountieswzVicOutput.py
+python /TerraPopCountieswzVicOutput_Max.py
+
+
+
+echo 'averaging the deep soil moisture over counties.....'
+python /DSMwithpopulation.py
+python /DSMwithpopulation_Max.py
+
+echo 'Plotting the population Vs deep soil moisture .....'
+python /SoilMoisturePercentage.py
+python /bubble_chart_per_mois_def_Bte.py
+
+
+echo 'Finished!'
+exit 0

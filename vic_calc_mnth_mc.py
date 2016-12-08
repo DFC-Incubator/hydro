@@ -11,7 +11,7 @@ import glob
 import spatiotempdatabase
 
 #Path of the folder where all the files are stored
-path = '/de-app-work/hydro/default/'
+path = '/de-app-work/'
 
 
 d = {}

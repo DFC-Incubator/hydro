@@ -64,7 +64,7 @@ if b[i][3] != b[i+1][3]:
 
 
 
-file = open(r"/de-app-work/hydro/TerraPopData/data_US_SLAD_2010.csv",'r')
+file = open(r"/de-app-work/data_US_SLAD_2010.csv",'r')
 
 
 file.readline()

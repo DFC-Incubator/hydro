@@ -10,7 +10,7 @@ RUN apt-get install -y gdal-bin python-gdal  python-matplotlib
 COPY matplotlibrc /etc/matplotlibrc
 
 #CMD ["ls","-r","/"]
-#WORKDIR ./code
+WORKDIR /
 
-#CMD ./PopulationVsSoilMoisture.scr
+ENTRYPOINT ["./PopulationVsSoilMoisture.scr"]
 

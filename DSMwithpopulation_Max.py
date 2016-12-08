@@ -3,8 +3,8 @@ from matplotlib.backends.backend_pdf import PdfPages
 
 
 
-reader = open(r"/SoilMoistureandCounties_Max.csv",'r')
-writer = open(r"/populationVsSoilMoisture_Max.csv", "w")
+reader = open(r"./SoilMoistureandCounties_Max.csv",'r')
+writer = open(r"./populationVsSoilMoisture_Max.csv", "w")
 writer.write("County, Population, Average Deep SoilMoisture_D(%), \n")
 
 
@@ -64,8 +64,8 @@ if b[i][3] != b[i+1][3]:
 
 
 
-file = open(r"/de-app-work/data_US_SLAD_2010.csv",'r')
-#/de-app-work/hydro/default
+file = open(r"./de-app-work/TerraPopData/data_US_SLAD_2010.csv",'r')
+
 
 file.readline()
 
@@ -107,7 +107,7 @@ writer.close()
 ##plt.show()
 
 
-#plt.savefig('/PopulationVsDeepsoilMositure.pdf')
+#plt.savefig('PopulationVsDeepsoilMositure.pdf')
 #plt.close()
 
 print 'hi'

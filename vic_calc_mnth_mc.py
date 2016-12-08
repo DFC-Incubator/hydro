@@ -11,7 +11,9 @@ import glob
 import spatiotempdatabase
 
 #Path of the folder where all the files are stored
-path = '/de-app-work/'
+path = '/de-app-work/default/'
+
+print "path=" + path
 
 
 d = {}
@@ -130,7 +132,7 @@ for dir, subdir, files in os.walk(path):
 
         ## create a csv file that contains all grids & the months and corresponding values
 
-            writer = open("/spatiotempSoilMoistureEcohydro.csv", "wb")
+            writer = open("spatiotempSoilMoistureEcohydro.csv", "wb")
             writer.write("lat, lon, duration, year, month,SoilMoisture_T(%),SoilMoisture_M(%),SoilMoisture_D(%)\n" )
             spatiotempdatabase.write_output(spatiotemporal_dictionary,writer,',')
             writer.close()

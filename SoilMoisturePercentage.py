@@ -5,7 +5,7 @@ from operator import itemgetter
 
 # open populationVsSoilMoisture.csv and extract data
 min_data = []
-with open('/populationVsSoilMoisture.csv', 'rb') as csvfile:
+with open('populationVsSoilMoisture.csv', 'rb') as csvfile:
  rdr = csv.reader(csvfile, delimiter=',')
  for row in rdr:
   min_data.append(row)
@@ -15,7 +15,7 @@ csvfile.close()
 
 # open populationVsSoilMoisture_Max.csv and extract data
 max_data = []
-with open('/populationVsSoilMoisture_Max.csv', 'rb') as csvfile:
+with open('populationVsSoilMoisture_Max.csv', 'rb') as csvfile:
  rdr = csv.reader(csvfile, delimiter=',')
  for row in rdr:
   max_data.append(row)

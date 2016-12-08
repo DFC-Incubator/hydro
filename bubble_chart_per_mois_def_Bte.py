@@ -1,5 +1,6 @@
 import numpy as np
 import matplotlib.pyplot as plt
+#matplotlib.use('Agg')
 import csv
 from operator import itemgetter
 
@@ -39,7 +40,7 @@ def plot_graph(pop, county_labs, percent_def):
 
 	#lgd = plt.legend(scatterpoints=1, labelspacing=1.0, borderaxespad=0., borderpad=1.0, markerscale = 0.750, title = 'Minimum soil moisture (%)',fontsize =12)
     #lgd = plt.legend(scatterpoints=1, labelspacing=1.0, borderaxespad=0., borderpad=1.0, markerscale = 0.750, title = 'Minimum soil moisture (%)',fontsize =12)
-    plt.savefig('PopulationVsDeepsoilMositure1.pdf', bbox_inches='tight')
+    plt.savefig('PopulationVsDeepsoilMoisture1.pdf', bbox_inches='tight')
     plt.show()
 
 

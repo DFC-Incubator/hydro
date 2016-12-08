@@ -1,13 +1,13 @@
 import ogr, sys
 
 driver = ogr.GetDriverByName('ESRI Shapefile')
-datasource = driver.Open('/de-app-work/boundaries_US_SLAD_2010.shp', 0)
+datasource = driver.Open('./de-app-work/TerraPopData/boundaries_US_SLAD_2010.shp', 0)
 
-reader = open(r"/VICModelOutputFiltered.csv",'r')
+reader = open(r"./VICModelOutputFiltered.csv",'r')
 reader.readline()
 
-#writer = open(r"/TerraPopCalculations", "w")
-file = open('/SoilMoistureandCounties.csv', 'w')
+#writer = open(r"./TerraPopCalculations", "w")
+file = open('SoilMoistureandCounties.csv', 'w')
 file.write("long, lat, County, GEOID, SoilMoisture_D(%),population \n")
 s= []
 
@@ -47,7 +47,7 @@ while i < len(s):
         y += 1
 
     datasource.Destroy()
-    datasource = driver.Open('/de-app-work/hydro/TerraPopData/boundaries_US_SLAD_2010.shp', 0)
+    datasource = driver.Open('./de-app-work/TerraPopData/boundaries_US_SLAD_2010.shp', 0)
 
 
 

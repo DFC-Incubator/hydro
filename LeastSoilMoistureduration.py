@@ -12,13 +12,13 @@ def getkey(item):
 ################################################################################
 
 # Open the file that needs to be filtered
-reader = open(r"/spatiotempSoilMoistureEcohydro.csv",'r')
+reader = open(r"./spatiotempSoilMoistureEcohydro.csv",'r')
 # Read lines in this file
 reader.readline()
 
 # New csv file will be created to save the output from the python code
 
-writer = open(r"/VICModelOutputFiltered.csv", "w")
+writer = open(r"./VICModelOutputFiltered.csv", "w")
 
 #In this file write the header names the purpose of \n is to go to the next line
 

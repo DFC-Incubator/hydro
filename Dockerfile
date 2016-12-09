@@ -8,7 +8,7 @@ ADD . /
 env DEBIAN_FRONTEND noninteractive
 RUN apt-get update
 
-RUN apt-get install -y gdal-bin python-gdal  python-matplotlib
+RUN apt-get install -y gdal-bin python-gdal  python-matplotlib nano
 
 
 WORKDIR /

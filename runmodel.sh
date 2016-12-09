@@ -1,4 +1,11 @@
 #!/usr/bin/env bash
 
+cd /de-app-work/hydro
+
+ls -la
+
 cd /
-./PopulationVsSoilMoisture.scr
+
+ls -la
+
+/PopulationVsSoilMoisture.scr

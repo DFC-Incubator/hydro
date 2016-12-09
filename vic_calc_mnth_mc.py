@@ -11,9 +11,10 @@ import glob
 import spatiotempdatabase
 
 #Path of the folder where all the files are stored
-path = '/de-app-work/default/'
+print 'in vic_calc_mnth_mc.py'
+path = '/de-app-work/hydro/default/'
 
-print "path=" + path
+print "path= %s" % (path)
 
 
 d = {}

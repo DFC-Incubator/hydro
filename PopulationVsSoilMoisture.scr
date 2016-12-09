@@ -14,16 +14,20 @@ echo 'Matching the the TerraPop Output with the VIC Model output .....'
 python ./TerraPopCountieswzVicOutput.py
 python ./TerraPopCountieswzVicOutput_Max.py
 
-
-
 echo 'averaging the deep soil moisture over counties.....'
 python ./DSMwithpopulation.py
 python ./DSMwithpopulation_Max.py
 
+echo 'setting up to run soil moisture pct'
+pwd
+ls -la /
+
+cd /
+
 echo 'Plotting the population Vs deep soil moisture .....'
 python ./SoilMoisturePercentage.py
 python ./bubble_chart_per_mois_def_Bte.py
-
+mv /PopulationVsDeepsoilMoisture1.pdf /de-app-work
 
 echo 'Finished!'
 exit 0

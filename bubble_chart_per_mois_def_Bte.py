@@ -1,12 +1,13 @@
-import numpy as np
+#import numpy as np
 import matplotlib.pyplot as plt
 #matplotlib.use('Agg')
 import csv
 from operator import itemgetter
 
-
+print('in bubble_chart_per_mois_def_bte.py')
 
 def plot_graph(pop, county_labs, percent_def):
+    print('plotting graph')
 	#setting up variables for graph
     colors = ['blue', 'royalblue', 'lightskyblue', 'powderblue', 'indianred'] #these are corresponding to the order of minimum average soil moisture (just the order, no scaling)
     max_marker_size = 1250
@@ -40,13 +41,13 @@ def plot_graph(pop, county_labs, percent_def):
 
 	#lgd = plt.legend(scatterpoints=1, labelspacing=1.0, borderaxespad=0., borderpad=1.0, markerscale = 0.750, title = 'Minimum soil moisture (%)',fontsize =12)
     #lgd = plt.legend(scatterpoints=1, labelspacing=1.0, borderaxespad=0., borderpad=1.0, markerscale = 0.750, title = 'Minimum soil moisture (%)',fontsize =12)
-    plt.savefig('PopulationVsDeepsoilMoisture1.pdf', bbox_inches='tight')
+    plt.savefig('/PopulationVsDeepsoilMoisture1.pdf', bbox_inches='tight')
     plt.show()
 
 
 #get data from the csv in rows as individual lists and put them in one list
 all_data = []
-with open('decrease in Soil moisture percent.csv', 'rb') as csvfile:
+with open('./decrease.csv', 'rb') as csvfile:
 	rdr = csv.reader(csvfile, delimiter=',')
 	for row in rdr:
 		all_data.append(row)
@@ -65,5 +66,6 @@ for row in all_data:
     pop.append(int(row[1]))
     percent_def.append(float(row[4]))
     min_mois.append(float(row[2]))
+
 
 plot_graph(pop, county_labs, percent_def)

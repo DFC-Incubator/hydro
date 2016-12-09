@@ -1,7 +1,7 @@
 import ogr, sys
 
 driver = ogr.GetDriverByName('ESRI Shapefile')
-datasource = driver.Open('./de-app-work/TerraPopData/boundaries_US_SLAD_2010.shp', 0)
+datasource = driver.Open('./de-app-work/hydro/TerraPopData/boundaries_US_SLAD_2010.shp', 0)
 
 reader = open(r"./VICModelOutputFiltered.csv",'r')
 reader.readline()
@@ -47,7 +47,7 @@ while i < len(s):
         y += 1
 
     datasource.Destroy()
-    datasource = driver.Open('./de-app-work/TerraPopData/boundaries_US_SLAD_2010.shp', 0)
+    datasource = driver.Open('./de-app-work/hydro/TerraPopData/boundaries_US_SLAD_2010.shp', 0)
 
 
 
